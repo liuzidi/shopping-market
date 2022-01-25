@@ -16,7 +16,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee checkLogin(Integer id, String image) {
         Employee res = employeeDAO.queryEmployeeById(id);
         if (res == null) return null;
-        else if (res.image.equals(image)) return res;
+        else if (res.getImage().equals(image)) return res;
         else return null;
     }
 }
