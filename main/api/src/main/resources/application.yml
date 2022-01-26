@@ -13,3 +13,4 @@ mybatis:
 #  classpath指的是resources
   mapper-locations: classpath:mappers/*Mapper.xml
   type-aliases-package: com.lzd.entity
+
