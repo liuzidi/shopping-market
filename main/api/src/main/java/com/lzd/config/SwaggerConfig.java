@@ -21,8 +21,8 @@ public class SwaggerConfig {
         ApiInfoBuilder apiInfoBuilder = new ApiInfoBuilder();
         apiInfoBuilder.title("Shop-Market api description")
                 .description("describe interface about shop-market")
-                .version("1.0.0")
-                .contact(new Contact("liuzidi", "www.liuzidi.com", "liuzidi17@163.com"));
+                .version("1.0.0");
+
         ApiInfo apiInfo = apiInfoBuilder.build();
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo)

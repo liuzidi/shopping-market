@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@MapperScan("com.lzd.dao")
+//@MapperScan("com.lzd.dao")
 @EnableScheduling
 public class ApiApplication {
 
