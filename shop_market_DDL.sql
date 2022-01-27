@@ -1,4 +1,3 @@
-USE shop_market;
 DROP TABLE
 IF
 	EXISTS users;;
