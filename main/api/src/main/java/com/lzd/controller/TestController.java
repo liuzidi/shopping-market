@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@Api(value = "提供测试的接口",tags = "测试api")
+@Api(value = "提供测试的接口", tags = "测试api")
 public class TestController {
     @Resource
     private TestService testService;
@@ -21,9 +21,9 @@ public class TestController {
     @GetMapping("/test")
     @ApiOperation("/test url-API")
     @ApiImplicitParams({
-            @ApiImplicitParam(dataType = "int",name = "test", value = "整数即可",required = true)
+            @ApiImplicitParam(dataType = "int", name = "test", value = "整数即可", required = true)
     })
-    public ResultVO testFunction(@RequestParam(defaultValue = "2")Integer test) {
-        return new ResultVO(200,"OK",testService.findTestByTest(test));
+    public ResultVO testFunction(@RequestParam(defaultValue = "2") Integer test) {
+        return new ResultVO(200, "OK", testService.findTestByTest(test));
     }
 }

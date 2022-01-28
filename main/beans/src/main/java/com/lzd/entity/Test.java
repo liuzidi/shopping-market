@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "Test实体类",description = "Test对象信息")
+@ApiModel(value = "Test实体类", description = "Test对象信息")
 public class Test {
-    @ApiModelProperty(dataType = "int",required = true)
+    @ApiModelProperty(dataType = "int", required = true)
     private Integer test;
 }

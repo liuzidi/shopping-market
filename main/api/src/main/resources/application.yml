@@ -10,7 +10,7 @@ spring:
       password: 1717
 
 mybatis:
-#  classpath指的是resources
+  #  classpath指的是resources
   mapper-locations: classpath:mappers/*Mapper.xml
   type-aliases-package: com.lzd.entity
 

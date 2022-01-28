@@ -36,10 +36,7 @@
         </dependency>
 
 
-
-
-
-<!--        热部署-->
+        <!--        热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -55,26 +52,26 @@
     </properties>
 
 
-<!--    <build>-->
-<!--        &lt;!&ndash; 添加资源 &ndash;&gt;-->
-<!--        <resources>-->
-<!--            <resource>-->
-<!--                <directory>src/main/resources</directory>-->
-<!--                &lt;!&ndash; src/main/resources下的指定资源放行 &ndash;&gt;-->
-<!--                <includes>-->
-<!--                    <include>**/*.properties</include>-->
-<!--                    <include>**/*.yml</include>-->
-<!--                    <include>**/*.xml</include>-->
-<!--                    <include>**/*.properties</include>-->
-<!--                    &lt;!&ndash;加载模板文件&ndash;&gt;-->
-<!--                    <include>**/*.html</include>-->
-<!--                    &lt;!&ndash;加载静态文件&ndash;&gt;-->
-<!--                    <include>/static/</include>-->
-<!--                </includes>-->
-<!--                <filtering>false</filtering>-->
-<!--            </resource>-->
-<!--        </resources>-->
-<!--    </build>-->
+    <!--    <build>-->
+    <!--        &lt;!&ndash; 添加资源 &ndash;&gt;-->
+    <!--        <resources>-->
+    <!--            <resource>-->
+    <!--                <directory>src/main/resources</directory>-->
+    <!--                &lt;!&ndash; src/main/resources下的指定资源放行 &ndash;&gt;-->
+    <!--                <includes>-->
+    <!--                    <include>**/*.properties</include>-->
+    <!--                    <include>**/*.yml</include>-->
+    <!--                    <include>**/*.xml</include>-->
+    <!--                    <include>**/*.properties</include>-->
+    <!--                    &lt;!&ndash;加载模板文件&ndash;&gt;-->
+    <!--                    <include>**/*.html</include>-->
+    <!--                    &lt;!&ndash;加载静态文件&ndash;&gt;-->
+    <!--                    <include>/static/</include>-->
+    <!--                </includes>-->
+    <!--                <filtering>false</filtering>-->
+    <!--            </resource>-->
+    <!--        </resources>-->
+    <!--    </build>-->
 
 
 </project>
