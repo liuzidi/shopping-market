@@ -9,12 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "响应VO", description = "响应码-响应信息-数据信息")
 public class ResultVO {
-    @ApiModelProperty(dataType = "int", required = true)
     private int code;
-    @ApiModelProperty(dataType = "string", required = true)
     private String msg;
-    @ApiModelProperty(dataType = "object", required = true)
     private Object data;
 }

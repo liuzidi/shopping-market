@@ -1,56 +1,17 @@
 package com.lzd.entity;
 
-import javax.persistence.*;
+import lombok.Data;
 
+import javax.persistence.Column;
+import javax.persistence.Table;
+
+@Data
+@Table(name = "users")
 public class Users {
-    @Column(name = "USER")
-    private String user;
-
-    @Column(name = "CURRENT_CONNECTIONS")
-    private Long currentConnections;
-
-    @Column(name = "TOTAL_CONNECTIONS")
-    private Long totalConnections;
-
-    /**
-     * @return USER
-     */
-    public String getUser() {
-        return user;
-    }
-
-    /**
-     * @param user
-     */
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    /**
-     * @return CURRENT_CONNECTIONS
-     */
-    public Long getCurrentConnections() {
-        return currentConnections;
-    }
-
-    /**
-     * @param currentConnections
-     */
-    public void setCurrentConnections(Long currentConnections) {
-        this.currentConnections = currentConnections;
-    }
-
-    /**
-     * @return TOTAL_CONNECTIONS
-     */
-    public Long getTotalConnections() {
-        return totalConnections;
-    }
-
-    /**
-     * @param totalConnections
-     */
-    public void setTotalConnections(Long totalConnections) {
-        this.totalConnections = totalConnections;
-    }
+    @Column(name = "user_id")
+    private Integer ID;
+    private String username;
+    private String password;
+    private String nickname;
+    private String realname;
 }
