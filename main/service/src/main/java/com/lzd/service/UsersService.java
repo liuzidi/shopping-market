@@ -8,4 +8,6 @@ import com.lzd.vo.ResultVO;
  */
 public interface UsersService {
     ResultVO checkLogin(String username, String password);
+
+    ResultVO checkRegister(String username, String password);
 }

@@ -5,10 +5,10 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <result column="USER_ID" jdbcType="INTEGER" property="ID" />
-    <result column="USERNAME" jdbcType="VARCHAR" property="username" />
-    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
-    <result column="NICKNAME" jdbcType="VARCHAR" property="nickname" />
-    <result column="REALNAME" jdbcType="VARCHAR" property="realname" />
+    <result column="user_id" jdbcType="VARCHAR" property="ID" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
   </resultMap>
 </mapper>

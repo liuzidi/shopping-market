@@ -11,14 +11,29 @@ import javax.annotation.Resource;
  * @Description:
  */
 @CrossOrigin
-@RestController("/user")
+@RestController
+@RequestMapping("/user")
 public class UsersController {
 
     @Resource
     UsersService usersService;
 
-    @PostMapping("/login")
-    public ResultVO login(@RequestParam String userName, @RequestParam String password) {
-        return usersService.checkLogin(userName, password);
+    @GetMapping("/test")
+    public void testInterface() {
+        System.out.println("enter test...");
+    }
+
+    @GetMapping("/login")
+    public ResultVO login(@RequestParam("username") String username,
+                          @RequestParam("password") String password) {
+        System.out.println(username + " wants to login...");
+        return usersService.checkLogin(username, password);
+    }
+
+    @PostMapping("/register")
+    public ResultVO register(@RequestParam("username") String username,
+                             @RequestParam("password") String password) {
+        System.out.println(username + " wants to register...");
+        return usersService.checkRegister(username, password);
     }
 }
