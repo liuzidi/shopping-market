@@ -5,14 +5,19 @@ import com.lzd.entity.Users;
 import com.lzd.service.UsersService;
 import com.lzd.util.MD5Utils;
 import com.lzd.vo.CodeStatus;
-import com.lzd.vo.MsgStatus;
 import com.lzd.vo.ResultVO;
+import io.jsonwebtoken.JwtBuilder;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author:liuzidi
@@ -36,8 +41,18 @@ public class UsersServiceImpl implements UsersService {
         if (res.size() == 0) {
             return new ResultVO(CodeStatus.FAILED, username + "用户名不存在", null);
         }else {
-            if (res.get(0).getPassword().equals(password))
-            return new ResultVO(CodeStatus.OK, MsgStatus.SUCCESS, res.get(0));
+            if (res.get(0).getPassword().equals(password)) {
+                Map<String, Object> map = new HashMap<>();
+                map.put("name", username);
+                map.put("pwd", password);
+                JwtBuilder builder = Jwts.builder();
+                String token = builder.setIssuedAt(new Date())
+                        .setExpiration(new Date(System.currentTimeMillis() + 24 * 60 * 60 * 1000))
+                        .setClaims(map)
+                        .signWith(SignatureAlgorithm.HS256, "liuzidi")
+                        .compact();
+                return new ResultVO(CodeStatus.OK, token, res.get(0));
+            }
             else return new ResultVO(CodeStatus.FAILED, "密码错误", res.get(0));
         }
     }

@@ -24,15 +24,15 @@ public class UsersController {
     }
 
     @GetMapping("/login")
-    public ResultVO login(@RequestParam("username") String username,
-                          @RequestParam("password") String password) {
+    public ResultVO login(@RequestHeader("username") String username,
+                          @RequestHeader("password") String password) {
         System.out.println(username + " wants to login...");
         return usersService.checkLogin(username, password);
     }
 
     @PostMapping("/register")
-    public ResultVO register(@RequestParam("username") String username,
-                             @RequestParam("password") String password) {
+    public ResultVO register(@RequestHeader("username") String username,
+                             @RequestHeader("password") String password) {
         System.out.println(username + " wants to register...");
         return usersService.checkRegister(username, password);
     }
