@@ -143,7 +143,25 @@ function getCookieValue(keyStr){
 
 为了控制受限资源在用户未登录情况下不允许访问
 
+加密算法：HS256，Base64，MD5，RS256
 
+jwt是一种token ：json web token
+
+jwt是一段被base64编码过的字符序列
+
+### 优点：
+
+在分布式系统中，可以有效的解决单点登录问题以及SESSION共享问题；服务器不保存token或者用户session信息，可以减少服务器压力。
+
+### 缺点：
+
+没有失效策略；设置失效时间后，只能等待token过期，无法改变token里面的失效时间
+
+
+
+相对于其他token的优越性在于：
+
+1. 安全性，其他token在反解析之后容易暴露原来，jwt为什么可以做到安全的原因在于：在解析前需要给signature中的密码才能开始解析
 
 单点登录：
 
