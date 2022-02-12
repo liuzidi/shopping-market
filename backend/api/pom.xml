@@ -52,26 +52,26 @@
     </properties>
 
 
-    <!--    <build>-->
-    <!--        &lt;!&ndash; 添加资源 &ndash;&gt;-->
-    <!--        <resources>-->
-    <!--            <resource>-->
-    <!--                <directory>src/main/resources</directory>-->
-    <!--                &lt;!&ndash; src/main/resources下的指定资源放行 &ndash;&gt;-->
-    <!--                <includes>-->
-    <!--                    <include>**/*.properties</include>-->
-    <!--                    <include>**/*.yml</include>-->
-    <!--                    <include>**/*.xml</include>-->
-    <!--                    <include>**/*.properties</include>-->
-    <!--                    &lt;!&ndash;加载模板文件&ndash;&gt;-->
-    <!--                    <include>**/*.html</include>-->
-    <!--                    &lt;!&ndash;加载静态文件&ndash;&gt;-->
-    <!--                    <include>/static/</include>-->
-    <!--                </includes>-->
-    <!--                <filtering>false</filtering>-->
-    <!--            </resource>-->
-    <!--        </resources>-->
-    <!--    </build>-->
+        <build>
+            <!-- 添加资源 -->
+            <resources>
+                <resource>
+                    <directory>src/main/resources</directory>
+                    <!-- src/main/resources下的指定资源放行 -->
+                    <includes>
+                        <include>**/*.properties</include>
+                        <include>**/*.yml</include>
+                        <include>**/*.xml</include>
+                        <include>**/*.properties</include>
+                        <!--加载模板文件-->
+                        <include>**/*.html</include>
+                        <!--加载静态文件-->
+                        <include>/static/</include>
+                    </includes>
+                    <filtering>false</filtering>
+                </resource>
+            </resources>
+        </build>
 
 
 </project>

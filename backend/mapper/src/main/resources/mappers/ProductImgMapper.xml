@@ -13,4 +13,17 @@
     <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
     <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
   </resultMap>
+
+  <select id="selectProductImgByProductId" resultMap="BaseResultMap">
+    select
+      id,
+      item_id,
+      url,
+      sort,
+      is_main,
+      created_time,
+      updated_time
+    from product_img
+    where item_id=#{productId}
+  </select>
 </mapper>

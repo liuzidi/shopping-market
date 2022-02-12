@@ -124,6 +124,7 @@
 								if(vo.code === 10000){
 									const token = vo.msg;
 									setCookieValue("TOKEN", token);
+									setCookieValue("username", vo.data.username)
 									if(this.returnUrl == null){
 										window.location.href = "index.html";
 									}else{
