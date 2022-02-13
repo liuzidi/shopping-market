@@ -72,7 +72,7 @@
 		
 		<script type="text/javascript" src="static/js/vue.js" ></script>
 		<script type="text/javascript" src="static/js/axios.min.js" ></script>
-		<!-- <script type="text/javascript" src="static/js/base.js" ></script> -->
+		<script type="text/javascript" src="static/js/base.js" ></script>
 		<script type="text/javascript">
 			
 			var vm = new Vue({
@@ -89,19 +89,18 @@
 				},
 				methods:{
 					doRegist(){
-						var baseUrl = "http://localhost:8080/"
 						if(!vm.isRight){
 							vm.tips="请确认注册信息输入完整且正确！";
 						}else{
 							//提交注册
-							var url = baseUrl+"user/register";
+							var url = baseUrl+"user/regist";
+							//axios.post(url,{username:"111",password:"222"}).then((res)=>{
+							//	console.log(res);
+							//});
 							axios({
 								method:"post",
 								url:url,
-								headers:{
-									username:vm.user.username,
-									password:vm.user.password
-								}
+								data:vm.user
 							}).then((res)=>{
 								var vo = res.data;
 								if(vo.code==10000){
@@ -121,16 +120,16 @@
 						if(vm.user.username == ""){
 							vm.tips="请输入账号！";
 							vm.isRight = false;
-						}else if(vm.user.username.length<3 || vm.user.username.length>20){
-							vm.tips="账号长度必须为3-20给字符！";
+						}else if(vm.user.username.length<8 || vm.user.username.length>20){
+							vm.tips="账号长度必须为8-20给字符！";
 							vm.isRight = false;
 						}else{
 							//2.校验密码
 							if(vm.user.password == ""){
 								vm.tips="请输入密码！";
 								vm.isRight = false;
-							}else if(vm.user.password.length<3 || vm.user.password.length>16){
-								vm.tips="密码长度必须为3-16给字符！";
+							}else if(vm.user.password.length<6 || vm.user.password.length>16){
+								vm.tips="密码长度必须为6-16给字符！";
 								vm.isRight = false;
 							}else{
 								//3.校验重复密码

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lzd.dao.ProductCommentsMapper">
-  <resultMap id="BaseResultMap" type="com.lzd.entity.ProductComments">
+<mapper namespace="com.qfedu.fmmall.dao.ProductCommentsMapper">
+  <resultMap id="BaseResultMap" type="com.qfedu.fmmall.entity.ProductComments">
     <id column="comm_id" jdbcType="VARCHAR" property="commId" />
     <result column="product_id" jdbcType="VARCHAR" property="productId" />
     <result column="product_name" jdbcType="VARCHAR" property="productName" />
@@ -19,7 +19,7 @@
     <result column="is_show" jdbcType="INTEGER" property="isShow" />
   </resultMap>
 
-  <resultMap id="ProductCommentsVOMap" type="com.lzd.entity.ProductCommentsVO">
+  <resultMap id="ProductCommentsVOMap" type="com.qfedu.fmmall.entity.ProductCommentsVO">
     <id column="comm_id" jdbcType="VARCHAR" property="commId" />
     <result column="product_id" jdbcType="VARCHAR" property="productId" />
     <result column="product_name" jdbcType="VARCHAR" property="productName" />
@@ -43,15 +43,16 @@
 
   <select id="selectCommontsByProductId" resultMap="ProductCommentsVOMap">
     select u.username,  u.nickname, u.user_img,
-           c.comm_id, c.product_id, c.product_name,
-           c.order_item_id, c.user_id, c.is_anonymous,
-           c.comm_type, c.comm_level, c.comm_content,
-           c.comm_imgs, c.sepc_name, c.reply_status,
-           c.reply_content, c.reply_time, c.is_show
+      c.comm_id, c.product_id, c.product_name,
+      c.order_item_id, c.user_id, c.is_anonymous,
+      c.comm_type, c.comm_level, c.comm_content,
+      c.comm_imgs, c.sepc_name, c.reply_status,
+      c.reply_content, c.reply_time, c.is_show
     from product_comments c
-           INNER JOIN users u
-                      ON u.user_id = c.user_id
+    INNER JOIN users u
+    ON u.user_id = c.user_id
     WHERE c.product_id =#{productId}
-      limit #{start},#{limit}
+    limit #{start},#{limit}
   </select>
+
 </mapper>

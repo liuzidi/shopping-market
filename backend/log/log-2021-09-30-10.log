@@ -1,0 +1,237 @@
+2021-09-30-10:00:52.714 INFO [http-nio-8080-exec-1]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:00:52.736 INFO [http-nio-8080-exec-1]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:00:52.770 INFO [http-nio-8080-exec-1]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:07:29.827 INFO [http-nio-8080-exec-8]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:07:29.876 INFO [http-nio-8080-exec-8]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:07:29.972 INFO [http-nio-8080-exec-8]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:10:37.527 INFO [http-nio-8080-exec-5]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:10:37.528 INFO [http-nio-8080-exec-5]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:10:38.993 INFO [http-nio-8080-exec-5]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:15:07.996 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:15:07.998 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:15:08.159 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:17:06.862 INFO [http-nio-8080-exec-6]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:17:06.864 INFO [http-nio-8080-exec-6]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:17:06.968 INFO [http-nio-8080-exec-6]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:17:57.848 INFO [http-nio-8080-exec-2]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:17:57.852 INFO [http-nio-8080-exec-2]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:17:57.924 INFO [http-nio-8080-exec-2]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:18:38.588 INFO [http-nio-8080-exec-8]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:18:38.594 INFO [http-nio-8080-exec-8]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:18:38.711 INFO [http-nio-8080-exec-8]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:19:52.739 INFO [http-nio-8080-exec-6]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:19:52.740 INFO [http-nio-8080-exec-6]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:19:52.849 INFO [http-nio-8080-exec-6]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:21:01.182 INFO [http-nio-8080-exec-7]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:21:01.225 INFO [http-nio-8080-exec-7]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:21:01.329 INFO [http-nio-8080-exec-7]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:23:52.987 INFO [http-nio-8080-exec-9]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:23:52.989 INFO [http-nio-8080-exec-9]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:23:53.223 INFO [http-nio-8080-exec-9]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:24:32.247 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:24:32.249 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:24:32.326 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:24:47.366 INFO [http-nio-8080-exec-7]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:24:47.368 INFO [http-nio-8080-exec-7]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:24:47.791 INFO [http-nio-8080-exec-7]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:26:01.675 INFO [http-nio-8080-exec-3]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:26:01.676 INFO [http-nio-8080-exec-3]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:26:01.755 INFO [http-nio-8080-exec-3]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:27:04.148 INFO [http-nio-8080-exec-10]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:27:04.149 INFO [http-nio-8080-exec-10]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:27:04.213 INFO [http-nio-8080-exec-10]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:28:34.900 ERROR [http-nio-8080-exec-1]-org.apache.juli.logging.DirectJDKLog:175>>Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: For input string: "43#"] with root cause
+java.lang.NumberFormatException: For input string: "43#"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.qfedu.fmmall.service.impl.ShoppingCartServiceImpl.listShoppingCartsByCids(ShoppingCartServiceImpl.java:68)
+	at com.qfedu.fmmall.service.impl.ShoppingCartServiceImpl$$FastClassBySpringCGLIB$$b5e569f1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.qfedu.fmmall.service.impl.ShoppingCartServiceImpl$$EnhancerBySpringCGLIB$$422ce072.listShoppingCartsByCids(<generated>)
+	at com.qfedu.fmmall.controller.ShopcartController.listByCids(ShopcartController.java:57)
+	at sun.reflect.GeneratedMethodAccessor415.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-09-30-10:29:39.574 INFO [http-nio-8080-exec-1]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:29:39.576 INFO [http-nio-8080-exec-1]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:29:40.570 INFO [http-nio-8080-exec-1]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:37:53.121 ERROR [http-nio-8080-exec-2]-org.apache.juli.logging.DirectJDKLog:175>>Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: For input string: "41#"] with root cause
+java.lang.NumberFormatException: For input string: "41#"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.qfedu.fmmall.service.impl.ShoppingCartServiceImpl.listShoppingCartsByCids(ShoppingCartServiceImpl.java:68)
+	at com.qfedu.fmmall.service.impl.ShoppingCartServiceImpl$$FastClassBySpringCGLIB$$b5e569f1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.qfedu.fmmall.service.impl.ShoppingCartServiceImpl$$EnhancerBySpringCGLIB$$422ce072.listShoppingCartsByCids(<generated>)
+	at com.qfedu.fmmall.controller.ShopcartController.listByCids(ShopcartController.java:57)
+	at sun.reflect.GeneratedMethodAccessor415.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-09-30-10:40:15.905 INFO [http-nio-8080-exec-8]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:40:15.906 INFO [http-nio-8080-exec-8]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:40:17.011 INFO [http-nio-8080-exec-8]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:52:17.349 ERROR [http-nio-8080-exec-10]-org.apache.juli.logging.DirectJDKLog:175>>Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: For input string: "42#"] with root cause
+java.lang.NumberFormatException: For input string: "42#"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.qfedu.fmmall.service.impl.ShoppingCartServiceImpl.listShoppingCartsByCids(ShoppingCartServiceImpl.java:68)
+	at com.qfedu.fmmall.service.impl.ShoppingCartServiceImpl$$FastClassBySpringCGLIB$$b5e569f1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.qfedu.fmmall.service.impl.ShoppingCartServiceImpl$$EnhancerBySpringCGLIB$$422ce072.listShoppingCartsByCids(<generated>)
+	at com.qfedu.fmmall.controller.ShopcartController.listByCids(ShopcartController.java:57)
+	at sun.reflect.GeneratedMethodAccessor415.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-09-30-10:52:40.967 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:52:40.968 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:52:41.223 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:54:17.053 INFO [http-nio-8080-exec-7]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:54:17.054 INFO [http-nio-8080-exec-7]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:54:17.082 INFO [http-nio-8080-exec-7]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...
+2021-09-30-10:56:12.681 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:43>>add order begin...
+2021-09-30-10:56:12.682 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:66>>product stock is OK...
+2021-09-30-10:56:13.125 INFO [http-nio-8080-exec-4]-com.qfedu.fmmall.service.impl.OrderServiceImpl:100>>add order finished...

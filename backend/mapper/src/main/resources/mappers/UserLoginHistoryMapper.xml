@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lzd.dao.UserLoginHistoryMapper">
-  <resultMap id="BaseResultMap" type="com.lzd.entity.UserLoginHistory">
+<mapper namespace="com.qfedu.fmmall.dao.UserLoginHistoryMapper">
+  <resultMap id="BaseResultMap" type="com.qfedu.fmmall.entity.UserLoginHistory">
     <!--
       WARNING - @mbg.generated
     -->

@@ -1,0 +1,27 @@
+category ----- category id ---- parent id
+index_img ---- 轮播图url ---- product id ---- category id(二选一）
+orders（以订单为粒度）---- order id ---- user id ---支付信息 --- 收货信息（写死）
+      order item（订单快照以sku为粒度） ---- item id ---- order id --- product id ---sku id --- sku信息 ---sku购买数量
+product --- product id --- category id --- 销量 --- 更新时间
+      product_comment --- pcomment id -- product id --- user id --- order_item id --- 评论图片和文字--- 好中差评
+      product_params---- param id ---- product id --- 商品品牌产地等信息
+      product_sku ---- product_id --- untitled 用{参数:[ ]} json格式进行记录 --- 原价 --售价 --- 折扣 -- 库存
+user --- user id ---- 登录信息 （昵称头像账号密码等）
+      user addr ---- addr id---- user id ---收货信息
+shop_cart ---- cart id ---- product id --- sku_id --- user id
+
+
+每个用户关联多个购物车shop-cart，拥有多个订单，拥有多个收货地址
+每个订单关联多个sku product 和拥有唯一一个收货地址
+每个商品关联多个sku product
+每个购物车都拥有唯一一个sku product
+
+特殊技术实现：
+登录采用jwt技术
+订单与用户收货信息不耦合的实现
+订单超时取消
+显示加入购物车后降价情况（加入购物车后价格写死在数据库中）
+tkMapper逆向工程
+采用RESTful URL设计规范
+Maven聚合工程
+如何实现购物时未登录登陆后返回购物页面

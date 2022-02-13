@@ -45,9 +45,11 @@
 				},
 				created:function(){
 					//获取到订单信息
-					var jsonstr = localStorage.getItem("order");
+					
+					var storage = window.sessionStorage;
+					var jsonstr = storage.getItem("order");
+					
 					if(jsonstr != null){
-						localStorage.removeItem("order");
 						this.order = eval("("+jsonstr+")");
 						console.log(this.order);
 					}

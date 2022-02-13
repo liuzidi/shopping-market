@@ -22,9 +22,12 @@
 		<div class="am-container header">
 			<ul class="message-l">
 				<div class="topMessage">
-					<div class="menu-hd">
-						<a href="#" target="_top" class="h">亲，请登录</a>
-						<a href="#" target="_top">免费注册</a>
+					<div class="menu-hd" v-if="isLogin">
+						{{username}},欢迎您
+					</div>
+					<div class="menu-hd" v-else>
+						<a href="login.html" target="_top" class="h">亲，请登录</a>
+						<a href="register.html" target="_top">免费注册</a>
 					</div>
 				</div>
 			</ul>
@@ -161,9 +164,10 @@
 										</div>
 									</li>
 									<li class="td td-op">
-										<div class="td-inner">
+										<div class="td-inner" >
 											<!--<a title="移入收藏夹" class="btn-fav" href="#"> 移入收藏夹</a>-->
-											<a href="javascript:;" data-point-url="#" class="delete">删除</a>
+											<!-- <a href="javascript:;" :data-point-url="'http://localhost:8080/shopcart/delete/'+shopcarts[index].cartId+'/'" class="delete">删除</a> -->
+											<a href="javascript:;" class="delete">删除</a>
 										</div>
 									</li>
 								</ul>
@@ -199,7 +203,7 @@
 							<strong class="price">¥<em id="J_Total">{{totalPrice}}</em></strong>
 						</div>
 						<div class="btn-area" @click="gotoOrderAdd">
-							<a href="#" id="J_Go" class="submit-btn submit-btn-disabled" aria-label="请注意如果没有选择宝贝，将无法结算">
+							<!-- <a href="#" id="J_Go" class="submit-btn submit-btn-disabled" aria-label="请注意如果没有选择宝贝，将无法结算"> -->
 								<span>结&nbsp;算</span></a>
 						</div>
 					</div>
@@ -208,7 +212,7 @@
 				<div class="footer">
 					<div class="footer-hd">
 						<p>
-							<a href="#">锋迷商城</a>
+							<a href="#">ZJUME商城</a>
 							<b>|</b>
 							<a href="#">商城首页</a>
 							<b>|</b>
@@ -219,11 +223,11 @@
 					</div>
 					<div class="footer-bd">
 						<p>
-							<a href="#">关于千锋</a>
+							<a href="#">关于ZJUME</a>
 							<a href="#">合作伙伴</a>
 							<a href="#">联系我们</a>
 							<a href="#">网站地图</a>
-							<em>©qfedu.com 版权所有</em>
+							<em>©zjume.com 版权所有</em>
 						</p>
 					</div>
 				</div>
@@ -303,6 +307,9 @@
 					shopcarts:[],
 					token:null,
 					opts:[],
+					isLogin: false,
+					username: "",
+					userimg: "",
 					totalPrice:0.00
 				},
 				watch:{
@@ -315,13 +322,16 @@
 					}
 				},
 				created:function(){
-					var token = getCookieValue("TOKEN");
-					if(token == null){
+					var token = getCookieValue("token");
+					if(token == null || token == ""){
 						var loginUrl = "login.html?tips=请先登录！&returnUrl=shopcart.html";
 						window.location.href = encodeURI(loginUrl);
 					}else{
 						//请求当前用户的购物车记录
 						this.token = token;
+						this.isLogin = true;
+						this.username = getCookieValue("username");
+						this.userimg = getCookieValue("userImg");
 						var userId = getCookieValue("userId");
 						var url = baseUrl+"shopcart/list";
 						axios({
@@ -398,6 +408,23 @@
 							//2.跳转到order-add.html，并cids传递过去
 							window.location.href="order-add.html?cids="+cids;
 						}
+					},
+					delCart:function(){
+						var index = event.srcElement.dataset.id;
+						
+						//请求购物车修改接口： cartId  num
+						var cid = this.shopcarts[index].cartId;
+						var url = "Access-Control-Allow-Origin: " + baseUrl+"shopcart/delete/"+cid;
+						axios({
+							url:url,
+							method:"put",
+							headers:{
+								token:this.token
+							}
+						}).then((res)=>{
+							console.log(res);
+							
+						});
 					}
 				}
 			});

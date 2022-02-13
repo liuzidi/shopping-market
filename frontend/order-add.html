@@ -25,9 +25,12 @@
 		<div class="am-container header">
 			<ul class="message-l">
 				<div class="topMessage">
-					<div class="menu-hd">
-						<a href="#" target="_top" class="h">亲，请登录</a>
-						<a href="#" target="_top">免费注册</a>
+					<div class="menu-hd" v-if="isLogin">
+						{{username}},欢迎您
+					</div>
+					<div class="menu-hd" v-else>
+						<a href="login.html" target="_top" class="h">亲，请登录</a>
+						<a href="register.html" target="_top">免费注册</a>
 					</div>
 				</div>
 			</ul>
@@ -226,7 +229,7 @@
 							</span></div>
 						<div id="holyshit268" class="pay-address">
 							<p class="buy-footer-address"><span class="buy-line-title buy-line-title-type">寄送至：</span> 
-								<span class="buy--address-detail">
+								<span v-if="addrs[addrIndex]" class="buy--address-detail">
 									<span class="province">{{addrs[addrIndex].province}}</span> 
 									<span class="city">{{addrs[addrIndex].city}}</span> 
 									<span class="dist">{{addrs[addrIndex].area}}</span> 
@@ -235,7 +238,7 @@
 							</p>
 							<p class="buy-footer-address">
 								<span class="buy-line-title">收货人：</span>
-								<span class="buy-address-detail">
+								<span v-if="addrs[addrIndex]" class="buy-address-detail">
 									<span class="buy-user">{{addrs[addrIndex].receiverName}}</span>
 									<span class="buy-phone">{{addrs[addrIndex].receiverMobile}}</span>
 								</span>
@@ -257,7 +260,7 @@
 		<div class="footer">
 					<div class="footer-hd">
 						<p>
-							<a href="#">锋迷商城</a>
+							<a href="#">ZJUME商城</a>
 							<b>|</b>
 							<a href="#">商城首页</a>
 							<b>|</b>
@@ -268,11 +271,11 @@
 					</div>
 					<div class="footer-bd">
 						<p>
-							<a href="#">关于千锋</a>
+							<a href="#">关于ZJUME</a>
 							<a href="#">合作伙伴</a>
 							<a href="#">联系我们</a>
 							<a href="#">网站地图</a>
-							<em>©qfedu.com 版权所有</em>
+							<em>©zjume.com 版权所有</em>
 						</p>
 					</div>
 				</div>
@@ -384,6 +387,8 @@
 			var vm = new Vue({
 				el:"#container",
 				data:{
+					isLogin: false,
+					username: "",
 					cartIds:"",
 					addrs:[],
 					shopCarts:[],
@@ -400,6 +405,11 @@
 					var userId = getCookieValue("userId");
 					var token = getCookieValue("token");
 					
+					this.isLogin = true;
+					this.username = getCookieValue("username");
+					
+					
+					//1.根据当前用户id查询收货地址信息
 					var url1 = baseUrl+"useraddr/list";
 					axios({
 						url:url1,
@@ -491,6 +501,12 @@
 								orderInfo.totalPrice = this.totalPrice; // {orderId:"123123",productNames:"aseraer",payUrl:"weixin://....",totalPrice:18.8}
 								
 								localStorage.setItem("orderInfo",JSON.stringify(orderInfo));
+								
+								var storage = window.sessionStorage;  
+								storage.setItem('orderInfo', JSON.stringify(orderInfo));
+								
+								
+								//alert(res.data.msg);
 								window.location.href = "order-pay.html";
 							}else if(res.data.code == 20001 || res.data.code == 20002){
 								window.location.href = "login.html";

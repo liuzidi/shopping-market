@@ -17,9 +17,5 @@ function getCookieValue(keyStr){
 }
 
 function setCookieValue(key,value){
-	//默认为一天的过期时间
-	var exp = new Date();
-	exp.setTime(exp.getTime() + 24*60*60*1000);
-	document.cookie = key+operator+value +";expires=" + exp.toGMTString();
-
+	document.cookie = key+operator+value;
 }

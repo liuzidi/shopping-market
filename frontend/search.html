@@ -22,9 +22,12 @@
 			<div class="am-container header">
 				<ul class="message-l">
 					<div class="topMessage">
-						<div class="menu-hd">
-							<a href="#" target="_top" class="h">亲，请登录</a>
-							<a href="#" target="_top">免费注册</a>
+						<div class="menu-hd" v-if="isLogin">
+							{{username}},欢迎您
+						</div>
+						<div class="menu-hd" v-else>
+							<a href="login.html" target="_top" class="h">亲，请登录</a>
+							<a href="register.html" target="_top">免费注册</a>
 						</div>
 					</div>
 				</ul>
@@ -55,19 +58,21 @@
 				</div>
 			<!--悬浮搜索框-->
 			<div class="nav white">
-					<div class="logo"><img src="static/images/logo.png" /></div>
-					<div class="logoBig">
-						<li><img src="static/images/logo.png" /></li>
-					</div>
-	
-					<div class="search-bar pr">
-						<a name="index_none_header_sysc" href="#"></a>
-						<form>
-							<input id="searchInput" v-model="keyword" name="index_none_header_sysc" type="text" placeholder="搜索" autocomplete="off">
-							<input id="ai-topsearch" class="submit am-btn"  value="搜索" index="1" type="submit">
-						</form>
-					</div>
+			
+				<div class="logoBig">
+					<img src="static/images/logo.png" style="margin-left: 0px">
 				</div>
+			
+				<div class="search-bar pr">
+					<a name="keyword" href="#"></a>
+					<form action="search.html">
+						<input id="searchInput" v-model="keyword" name="keyword" type="text"
+							placeholder="搜索" autocomplete="off">
+						<input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="button"
+							@click="toSearch">
+					</form>
+				</div>
+			</div>
 	
 			<div class="clear"></div>
 			<b class="line"></b>
@@ -101,8 +106,8 @@
 									</div>
 									<ul class="select">
 										<p class="title font-normal">
-											<span class="fl">松子</span>
-											<span class="total fl">搜索到<strong class="num">997</strong>件相关商品</span>
+											<span class="fl">{{keyword}}</span>
+											<span class="total fl">搜索到<strong class="num">{{count}}</strong>件相关商品</span>
 										</p>
 										<div class="clear"></div>
 										<li class="select-result">
@@ -251,7 +256,7 @@
 						<div class="footer">
 								<div class="footer-hd">
 									<p>
-										<a href="#">锋迷商城</a>
+										<a href="#">ZJUME商城</a>
 										<b>|</b>
 										<a href="#">商城首页</a>
 										<b>|</b>
@@ -262,11 +267,11 @@
 								</div>
 								<div class="footer-bd">
 									<p>
-										<a href="#">关于千锋</a>
+										<a href="#">关于zjume</a>
 										<a href="#">合作伙伴</a>
 										<a href="#">联系我们</a>
 										<a href="#">网站地图</a>
-										<em>©qfedu.com 版权所有</em>
+										<em>©zjume.com 版权所有</em>
 									</p>
 								</div>
 							</div>
@@ -451,10 +456,13 @@
 		<script type="text/javascript" src="static/js/axios.min.js" ></script>
 		<script type="text/javascript" src="static/js/utils.js" ></script>
 		<script type="text/javascript" src="static/js/base.js" ></script>
+		<script type="text/javascript" src="static/js/cookie_utils.js"></script>
 		<script type="text/javascript">
 			var vm = new Vue({
 				el:"#container",
 				data:{
+					username: "",
+					isLogin: false,
 					categoryId:"",
 					pageNum:1,
 					limit:4,
@@ -464,6 +472,13 @@
 					keyword:""
 				},
 				created:function(){
+					
+					var token = getCookieValue("token");
+					if (token != null && token != "") {
+						this.isLogin = true;
+						this.username = getCookieValue("username");
+					}
+					
 					//1.获取从上个页面传递过来的参数
 					var cid = getUrlParam("cid");
 					var keyword = getUrlParam("keyword");
@@ -573,6 +588,10 @@
 					},
 					toIntroduction:function(pid){
 						window.location.href = "introduction.html?pid="+pid;
+					},
+					toSearch: function() {
+						var url = "search.html?keyword=" + this.keyword;
+						window.location.href = encodeURI(url);
 					}
 				}
 			});

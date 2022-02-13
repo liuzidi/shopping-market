@@ -204,7 +204,9 @@
 					gotoComment:function(event){
 						var index = event.srcElement.dataset.index;
 						var order = this.orders[index];
-						localStorage.setItem("order",JSON.stringify(order));
+						
+						var storage = window.sessionStorage;
+						storage.setItem("order",JSON.stringify(order));
 						window.location.href = "user-commentadd.html";
 					}
 				}
