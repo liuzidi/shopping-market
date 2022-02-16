@@ -521,3 +521,200 @@ noeviction (不淘汰任何数据，内存不足则抛出异常)
 ==如何解决redis集群的脑裂问题？==
 
 ==redis数据可以设置过期时间，如何处理过期的redis的数据？==
+
+登录时的过期问题，jwt过期，会出现一分钟前还能登录，一分钟后突然需要登录的情况
+
+拦截器中，根据token查询redis，如果未查询到数据，说明用户未登录，或者登录过期，
+
+一旦验证通过，重新设置超时时间。但是会带来一个新的问题，就是不经过拦截器的非受限资源仍然不会更新时间，因此我增加了一个拦截器，用来拦截器所有请求，只要请求头里有token就会去更新redis中token的过期时间
+
+![image-20220216132910549](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220216132910549.png)
+
+**Nginx负载均衡搭建Tomcat集群**
+
+![image-20220216141459916](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220216141459916.png)
+
+**Nginx负载均衡策略：**
+
+提供四种负载均衡策略
+
+1. 默认方式：轮询
+
+根据用户的请求交替发送给每个服务器节点
+
+![image-20220216142036647](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220216142036647.png)
+
+2. 权重
+
+根据服务器性能和资源情况设置对应权重比，适合服务器配置差别比较大的情况。
+
+3. ip-hash
+
+保证每个访客访问同一个后端服务器，解决session不能跨服务器的问题
+
+4. least_conn
+
+把请求转发给连接数较少的服务器（有时候请求的占用时间不同）
+
+---
+
+**分布式集群商品超卖问题**
+
+因为同一台服务器的锁不能对其他服务器进行限制的问题，需要增加分布式锁
+
+分布式锁
+
+![image-20220216143647905](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220216143647905.png)
+
+分布式事务 setnx key value 
+
+```shell
+只在键 `key` 不存在的情况下， 将键 `key` 的值设置为 `value` 。
+
+若键 `key` 已经存在， 则 `SETNX` 命令不做任何动作。
+
+`SETNX` 是『SET if Not eXists』(如果不存在，则 SET)的简写
+```
+
+
+
+redis分布式锁解决方案：在执行添加订单的流程之前，以当前商品ID为key向redis保存一条数据，如果redis已经存在该key时，则需要等待，当订单完成时，删除redis商品ID的key，
+
+可能遇到的问题：
+
+加锁成功后遇到故障导致无法释放锁
+
+线程异常导致无法释放锁（设置过期时间）
+
+线程锁过期，导致释放其他线程锁的情形
+
+![image-20220216150843196](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220216150843196.png)
+
+看门狗机制：
+
+守护线程，负责在key快过期的时候延长过期时间，守护线程会在主线程挂掉的时候自行销毁
+
+---
+
+**分布式锁框架Redission**
+
+实现原理：
+
+![image-20220216153307378](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220216153307378.png)
+
+---
+
+**分布式锁的分类**
+
+![image-20220216153618648](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220216153618648.png)
+
+---
+
+### **搜索引擎**
+
+ES和Solar，主要应对模糊搜索的中间件
+
+---
+
+#### Lucene引擎的原理
+
+基于Lucene（鲁森）驱动的搜索引擎
+
++ 数据的分类
+
+数据分为结构化的数据（固定格式和有限长度）和非结构化的数据（不定长和不固定格式的数据）
+
+>  结构化的数据采用SQL即可
+>
+> 非结构化的数据的扫描，主要有两种方法：
+>
+> 1. 顺序扫描法
+>
+>    从头到尾扫描内容，很慢
+>
+> 2. 全文检索
+>
+>    先提取一部分信息，重新组织，使其变得有一定结构，再对有结构的数据进行搜索。搜索速度较快，这部分是从非结构化数据中提取的然后重新组织的信息，我们称之为索引
+
+![image-20220216155045308](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220216155045308.png)
+
+每条记录就是一个document
+
+document 将原始内容创建为包含域Field的Document，对域中的内容进行分析，提取单词，每个单词叫做一个term
+
+建立索引，倒排索引
+
+![image-20220216160507205](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220216160507205.png)
+
+搜索内容----分词器分为关键字-----根据关键字查找库中的document---返回document
+
+#### 分词器原理
+
+英文分词器：
+
+输入文本，词汇切分，去除语气助词，大写转小写，形态还原（如一个词的多种形态形容词，副词，名词，复数形式等等）
+
+中文分词器：
+
+单字分词，二分法分词，词库分词（按照已建好的词库集合进行匹配）
+
+停用词过滤
+
+==常用的中文分词器IKAnalyzer==，IK分词器
+
+---
+
+#### 基于lucene全文检索和数据库查询的比较
+
+**性能上：**
+
+数据库在大数据进行模糊搜索时，性能极大减弱
+
+lucene，建立索引库，一次建立多次使用，根据索引可以迅速查找到对应词条，性能好
+
+**相关度排序**
+
+数据库难以用于排名，需要增加字段
+
+lucene的document有分数，分数越高，排名越靠前
+
+**准确性**
+
+数据库：可能会查到大量语义不符的数据
+
+lucene：经过分词处理，准确率大大提高
+
+---
+
+#### ES简介
+
+ES与lucene的关系：
+
+1. 成品和半成品的关系
+2. 分布式/集群和单节点的关系
+3. 可以直接使用和只是个接口的区别
+
+ES与Solr的关系
+
+1. ES自带分布式不需要其他组件，Solr与Zookeeper进行分布式管理
+2. ES用于云计算
+3. 单纯从已有数据进行搜索时，Solr更快，但是实时建立索引时，Solr会产生io阻塞，建立速度慢。随着数据量的增加，Solr的搜索效率会明显的降低，而ES没有明显的变化
+
+ES的优点
+
+1. 安装管理方便
+2. 大规模分布式
+3. 多用户支持
+4. 高可用，操作持久化
+
+ES使用实例：维基百科，StackOverFlow，GitHub都在用。
+
+---
+
+ES 默认端口9200 kibana端口5601
+
+ELK的技术栈ElasticSearch Logstash Kibana（分析数据，可视化数据）
+
+配置Kibana，IK分词器
+
+ES的index相当于数据库，type相当于数据表，document文档相当于一条记录
