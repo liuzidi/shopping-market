@@ -818,5 +818,92 @@ SpringCloud
 
 ![image-20220217112711962](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220217112711962.png)
 
+SpringcCloud-Netflix
+
+Eureka :服务注册与发现中心
+
+Ribbon：负载均衡，服务访问组件
+
+Hystrix：熔断器
+
+Feign 服务访问组件
+
+zull网关路由组件
 
 
+
+服务注册中心 Eureka--集群 相互注册
+
+接口：创建springboot应用开发---注册到服务注册中心eureka上（注意eureka版本）
+
+服务发现Feign/Ribbon：服务消费者（api-order-add）通过eureka查找服务提供者（order-add）,通过服务调⽤组件调⽤提供者
+
+熔断器的原理：设置超时时间和降级服务内容
+
+有三种状态 open-halfopen-close状态
+
+正常情况下为close状态，在A服务请求B服务响应超时，会响应降级服务，在多次响应超时，故障率达到阈值时，5s/20次，熔断器状态会变为open，A服务不在请求B服务，而是直接响应降级服务，在一个时间周期之后，A会再次请求B服务，此时为half-open状态，若B服务恢复正常，则熔断器重回close状态，若仍然失败，则回到open状态
+
+---
+
+商城项目的微服务拆分设计
+
+拆分方式：水平拆分和垂直拆分（业务+分成）
+
+拆分粒度一般为一个接口一个微服务，每个数据库操作一个服务
+
+查询库存-保存订单-保存订单快照-修改库存-删除购物车
+
+![微服务拆分](tips.assets/微服务拆分.JPG)
+
+---
+
+网关：
+
+遇到的问题：
+
+前端需要记录大量的服务器列表
+
+服务器迁移后需要修改前端代码
+
+服务器集群部署时，无法实现负载均衡
+
+Nginx通常被⽤作应⽤服务器⽹关，服务⽹关通常使⽤zuul或者gateway
+
+---
+
+微服务架构：
+
+服务管理：eureka
+
+服务通信：feign
+
+服务故障处理：Hystrix
+
+统一网关：Netflix Gateway/zuul
+
+服务链路追踪：zipkin
+
+分布式配置中心： springcloud comfig
+
+---
+
+服务通信过程中可能需要异步调用
+
+Feign同步调用
+
+MQ相互对比
+
+RabbitMQ 稳定可靠,数据⼀致,⽀持多协议,有消息确认,基于erlang语⾔ 
+
+Kafka ⾼吞吐,⾼性能,快速持久化,⽆消息确认,⽆消息遗漏,可能会有有重复消息,依赖于zookeeper,成本⾼.
+
+ActiveMQ 不够灵活轻巧,对队列较多情况⽀持不好.
+
+RocketMQ 性能好,⾼吞吐,⾼可⽤性,⽀持⼤规模分布式，协议⽀持单⼀
+
+---
+
+MQ传递对象通过json string字符串进行
+
+也可以直接传对象，但是要先满足可序列化的接口，而且生产者消费者的传递的对象的类的包名，类名，和属性名必须一致
