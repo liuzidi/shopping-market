@@ -775,3 +775,48 @@ filter：不会进行分数积累
 3. 需要依赖分布式数据架构
 4. 单元测试更困难（启动很多服务器才能启动）
 5. 学习成本高
+
+---
+
+SpringCloud
+
+ 服务注册与发现中心
+
+服务提供者 与服务注册与发现中心 保持心跳
+
+服务消费者通过LoadBalance调用服务提供者
+
+![image-20220217104313564](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220217104313564.png)
+
+服务之间如何通信：
+
+两种方式：同步调用和异步调用
+
+同步调用：
+
++ REST（SpringCloud Netflix/Alibaba）
+  + 基于HTTP协议的请求和响应
+  + 实现简单，技术更灵活
+  + 支持语言多，可实现跨客户端
++ RPC（Dubbo）
+  + 基于网络层协议
+  + 传输效率高
+  + 安全性高
+  + 如果有同一的框架，开发效率比较高
+
+异步调用：
+
+服务器之间的异步通信通过消息队列实现RabbitMQ
+
+服务调用链容易造成服务雪崩
+
+在一条服务调用链，因为某个服务器节点故障导致依赖这个服务就会被阻塞，如果此时有大量的用户请求涌入，产生阻塞的服务就可能会因为资源被耗尽而导致服务瘫痪。
+
+---
+
+网关  起到代理的服务
+
+![image-20220217112711962](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220217112711962.png)
+
+
+
